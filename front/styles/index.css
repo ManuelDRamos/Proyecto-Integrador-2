@@ -1,0 +1,146 @@
+body{
+    font-style:oblique;
+    margin: 10px;
+    background-color: black;
+    background-image: url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2luZW1hfGVufDB8fDB8fHww);
+    background-size: cover;
+    background-repeat:no-repeat;
+    color: white;
+    padding: 20px;
+}
+
+.barraNavegador {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #612525;
+}
+
+.logoNav {
+    display: flex;
+    align-items: center;
+}
+
+#icono {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+
+#icono:hover {
+    transform: scale(1.1);
+}
+
+.logoNav h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: black;
+}
+
+.homeLink {
+    text-decoration: none;
+    color: #000; 
+    font-size: 2rem;
+    
+}
+
+.homeLink:hover {
+    color: #007bff;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+    text-decoration:wavy;
+}
+
+p{
+    font-size: 20px;
+    text-align: center;
+    line-height: 30px;
+    font-style: normal;
+}
+
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+    transition: transform  0.3s ease-in-out;
+}
+
+img:hover{
+    transform: scale(1.1);
+    filter:sepia(70%);
+}
+
+.con_peliculas {
+    padding: 20px;
+    text-align: center;
+}
+
+.con_peliculas h2 {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.menu ul {
+    display: flex;
+    list-style:none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-right: 30px;
+}
+
+.menu li:last-child {
+    margin-right: 0;
+}
+
+.menu a {
+    text-decoration:double;
+    color: #000;
+    font-size: 20px;
+}
+
+.menu a:hover {
+    color: #007bff;
+}
+
+.tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.tarjeta {
+    width: 180px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px white; 
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: auto;
+}
+
+.tarjeta h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.tarjeta p {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+
+
