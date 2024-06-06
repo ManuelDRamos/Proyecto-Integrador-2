@@ -32,26 +32,3 @@ const tempData = [
 ];
 
 
-const tarjetasContainer = document.querySelector('.tarjetas');
-
-
-tempData.forEach(pelicula => {
-    
-    const tarjeta = document.createElement('div');
-    tarjeta.classList.add('tarjeta');
-
-    
-    tarjeta.innerHTML = `
-        <img src="${pelicula.poster}" alt="${pelicula.title}">
-        <h3>${pelicula.title}</h3>
-        <p><strong>Año:</strong> ${pelicula.year}</p>
-        <p><strong>Director:</strong> ${pelicula.director}</p>
-        <p><strong>Duración:</strong> ${pelicula.duration}</p>
-        <p><strong>Género:</strong> ${pelicula.genre.join(', ')}</p>
-        <p><strong>Calificación:</strong> ${pelicula.rate}</p>
-    `;
-
-    
-    tarjetasContainer.appendChild(tarjeta);
-});
-
