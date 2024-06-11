@@ -1,17 +1,25 @@
 const {agregarContenedor} = require("./renderCards.js");
+const axios = require("axios")
 
-// Función para obtener los datos de la API y agregar las tarjetas
-const obtenerDatosYAgregarTarjetas = () => {
-  $.get("https://students-api.up.railway.app/movies", (data) => {
-    agregarContenedor(data);
-  }).fail((error) => {
-    alert("Error al obtener los datos: ", error);
-  });
-};
+const getMovies = "https://students-api.up.railway.app/movies"
 
-// Agregar las tarjetas al cargar la página
-document.addEventListener("DOMContentLoaded", (elemento) => {
-  elemento.preventDefault();
-  obtenerDatosYAgregarTarjetas();
-});
+const getData = async () => {
+  try {
+      const response = await axios.get(getMovies)
+      agregarContenedor(response.data)
+  } catch (error) {
+      console.log(error)
+      fail()
+  }
+}
+getData()
 
+
+// axios.get(getMovies)
+//     .then((data) => {
+//       agregarContenedor(data.data)
+//   })
+//     .catch((error) => {
+//       console.log(error)
+//       fail()
+// })
