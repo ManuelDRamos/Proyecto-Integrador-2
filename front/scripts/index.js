@@ -1,12 +1,13 @@
 const {agregarContenedor} = require("./renderCards.js");
 const axios = require("axios")
 
-const getMovies = "https://students-api.up.railway.app/movies"
 
-const getData = async () => {
+
+async  function getData(){
   try {
-      const response = await axios.get(getMovies)
-      agregarContenedor(response.data)
+      const response = await axios.get("http://localhost:3000/movies")
+      console.log(response.data.data);
+      agregarContenedor(response.data.data)
   } catch (error) {
       console.log(error)
       fail()
