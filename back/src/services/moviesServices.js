@@ -50,8 +50,6 @@ function getMoviesService(){
 }
 
 
-
-
 module.exports = {
     getMoviesService
 }

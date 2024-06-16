@@ -1,4 +1,5 @@
 const { app } = require("./src/server.js")
+const db = require("./db.js")
 
 
 const PORT  = 3000
