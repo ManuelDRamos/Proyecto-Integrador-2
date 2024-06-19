@@ -1,10 +1,14 @@
 const { app } = require("./src/server.js")
-const db = require("./db.js")
+const { dbConnect } = require("./src/config/db.js")
 
 
-const PORT  = 3000
 
-
-app.listen(PORT, () => {
-    console.log(`El servidor esta activo en el puerto ${PORT}`)
+dbConnect()
+.then(() => {
+    app.listen(3000, () => {
+        console.log("El servidor esta activo en el puerto 3000")
+    })
+})
+.catch((err) => {
+    console.error(err)
 })
