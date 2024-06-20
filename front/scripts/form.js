@@ -1,44 +1,31 @@
-// const titleInputValue = document.getElementById("title").value
-// const yearInputValue = document.getElementById("year").value
-// const directorInputValue = document.getElementById("director").value
-// const durationInputValue = document.getElementById("duration").value
-// const genreInputValue = document.getElementById("genre").value
-// const rateInputValue = document.getElementById("rate").value
-// const posterInputValue = document.getElementById("poster").value
+const axios = require("axios")
 
-// const form = document.getElementById("form")
+function form(){
+    document.querySelector("#submitButon").addEventListener("click", (e) => {
+        e.preventDefault()
+        const title = document.querySelector("#title").value
+        const year = document.querySelector("#year").value
+        const director = document.querySelector("#director").value
+        const poster = document.querySelector("#poster").value
+        const rate = document.querySelector("#rate").value
+        const duration = document.querySelector("#duration").value
+        const genre = document.querySelector("#genre").value
+    
+        const moviesObject = { title, year, director, poster, rate, duration, genre}
+        axios.post("http://localhost:3000/movies", moviesObject)
+            .then((response) => {
+                if(response.status === 200) alert("Pelicula creada con exito")
+            })
 
+    document.querySelector("#resetButon").addEventListener("click", (e) => {
+        e.preventDefault()
+        document.querySelector("#formPeliculas").reset()
+    })        
+    
+    })
 
-// form.addEventListener("submit", () => {
-//     const moviesValues = {
-//         title: titleInputValue,
-//         year: yearInputValue,
-//         director: directorInputValue,
-//         duration: durationInputValue,
-//         genre: genreInputValue,
-//         rate: rateInputValue,
-//         poster: posterInputValue,
-//     }
-//     axiosPost(moviesValues)
-// })
+}
 
-// async function axiosPost(data) {
-//     await axiosPost.post("http://localhost:3000/movies" , data)
-// }
-
-const movieForm = document.getElementById('movieForm');
-
-movieForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-
-  const formData = new FormData(movieForm);
-  const formDataObject = Object.fromEntries(formData.entries());
-  console.log('Form data:', formDataObject);
-
-  try {
-    const response = await axios.post('http://localhost:3000/movies', formDataObject);
-    console.log('Movie added successfully:', response.data);
-  } catch (error) {
-    console.error('Error adding movie:', error);
-  }
-});
+module.exports = {
+    form
+}

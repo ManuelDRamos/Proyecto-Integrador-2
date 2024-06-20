@@ -1,7 +1,8 @@
 const {agregarContenedor} = require("./renderCards.js");
+const { form } = require("./form.js")
 const axios = require("axios")
 
-
+const contenedorTarjetas = document.querySelector("#tarjetas");
 
 async  function getData(){
   try {
@@ -13,7 +14,14 @@ async  function getData(){
       fail()
   }
 }
-getData()
+
+if(contenedorTarjetas){
+  getData()
+}else{
+  form()
+}
+
+
 
 
 // axios.get(getMovies)

@@ -1,8 +1,9 @@
 body{
-    font-style:oblique;
+    font-style:initial;
     margin: 10px;
     background-image: url(https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Y2luZW1hfGVufDB8fDB8fHww);
     background-size: cover;
+    background-attachment: fixed;
     background-repeat:no-repeat;
     color: white;
     padding: 20px;
@@ -14,6 +15,7 @@ body{
     align-items: center;
     padding: 10px 20px;
     background-color: #612525;
+    color: white;
 }
 
 .logoNav {
@@ -22,7 +24,7 @@ body{
 }
 
 #icono {
-    width: 80px;
+    width: 120px;
     height: auto;
     margin-right: 10px;
     transition: transform 0.3s ease;
@@ -33,15 +35,29 @@ body{
 }
 
 .logoNav h1 {
-    font-size: 2rem;
+    font-size: 18px;
     margin: 0;
-    color: black;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration:dashed 3px darkorange;
+    text-decoration-line:line-through;
 }
 
 .homeLink {
     text-decoration: none;
-    color: #000; 
-    font-size: 2rem;
+    color: white; 
+    font-size: 20px;
+    margin: 4px;
+    border: 2px dashed darkorange;
+    padding: 8px 15px;
+    margin: 5px;
+    border-radius: 8px;
+    background-color: black;
+    font-weight: bold;
     
 }
 
@@ -50,17 +66,28 @@ body{
 }
 
 h2{
-    font-size: 2rem;
+    font-size: 28px;
     text-align: center;
-    text-decoration:wavy;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    text-decoration:dashed 1px darkorange;
+    text-decoration-line:line-through;
 }
 
 p{
-    font-size: 20px;
-    text-align: center;
-    line-height: 30px;
-    font-style: normal;
-    
+    font-size: 18px;
+    text-align: justify;
+    line-height: 25px;
+    font-style: initial;
+    font-family: Arial, sans-serif;
+    text-justify: inter-word;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box; 
+    width: 80%;
+    max-width: 800px;
 }
 
 img{
@@ -79,7 +106,7 @@ img{
 }
 
 .con_peliculas h2 {
-    font-size: 2rem;
+    font-size: 28px;
     margin: 0;
 }
 
@@ -88,10 +115,12 @@ img{
     list-style:none;
     padding: 0;
     margin: 0;
+
 }
 
 .menu li {
     margin-right: 30px;
+    
 }
 
 .menu li:last-child {
@@ -100,8 +129,15 @@ img{
 
 .menu a {
     text-decoration:double;
-    color: #000;
-    font-size: 20px;
+    color: white;
+    font-size: 18px;
+    display: inline-block;
+    border: 2px dashed darkorange;
+    padding: 8px 15px;
+    margin: 2px;
+    border-radius: 8px;
+    background-color: black;
+    font-weight: bold;
 }
 
 .menu a:hover {
@@ -119,11 +155,10 @@ img{
 }
 
 .card {
-    background-color: rgb(17, 16, 16);
+    background-color: rgb(19, 17, 17);
     border-radius: 8px;
     box-shadow: 0 4px 8px white;
     overflow: hidden;
-    transition: transform 0.2s;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -131,26 +166,22 @@ img{
     margin: 10px auto;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-}
-
 .card-title {
-    font-size: 1.5em;
+    font-size: 20px;
     margin: 10px;
     color: white;
     text-align: center;
 }
 
 .card-image {
-    width: 70%;
+    width: 80%;
     height: auto;
     display: block;
     margin: 10px auto; 
 }
 
 .card-text {
-    font-size: 1em;
+    font-size: 15px;
     margin: 10px;
     color: whitesmoke;
     text-align: center;
@@ -166,20 +197,34 @@ img{
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .card-button:hover {
+    padding: 10px;
+    font-size: small;
+}
+
+.card-button:hover {
     background-color: #863434;
-  }
-  
-  .card-button:active {
+}
+
+.card-button:active {
     background-color: #863434;
-  }
-  
+}
+
 
 @media (max-width: 600px) {
     #tarjetas {
         grid-template-columns: 0fr;
     }
+}
+
+.custom-btn {
+    padding: 5px 10px;
+    font-size: 12px;
+    width: 100px;
+}
+
+.carousel-item img {
+    max-width: 75%; 
+    height: auto; 
+    margin: 0 auto;
 }
 
