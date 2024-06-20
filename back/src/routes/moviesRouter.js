@@ -1,11 +1,11 @@
 const { Router } = require("express");
 const { getAllMovies, createMovieController } = require("../controllers/moviesController");
-const { testMiddleware } = require("../middlewares");
+const { testMiddleware, bodyValidation } = require("../middlewares");
 
 const moviesRouter = Router();
 
 moviesRouter.get("/", testMiddleware, getAllMovies);
-moviesRouter.post("/", testMiddleware, createMovieController);
+moviesRouter.post("/", bodyValidation, createMovieController);
 
 module.exports = {
    moviesRouter

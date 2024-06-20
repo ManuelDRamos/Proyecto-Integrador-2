@@ -8,7 +8,7 @@ const app = express();
 app.use(morgan("dev"));
 app.use(cors());
 app.use(express.json());
-app.use("/movies", moviesRouter); // Montar las rutas de películas en '/movies'
+app.use("/movies", moviesRouter);
 
 module.exports = {
     app

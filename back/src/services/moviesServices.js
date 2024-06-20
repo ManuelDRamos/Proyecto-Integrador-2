@@ -1,21 +1,30 @@
 const { Movie } = require("../models/Movies.js")
 
 
-const getAllMovies = () => {
-    return  Movie.find()
-};
+async function getAllMovies (){
+  try {
+    return await Movie.find()
+  } catch (error) {
+    throw error
+  }
+    
+}
 
 
-const createMovieController = async (movieData) => {
-   const movie = new Movie(movieData);
-  await movie.save();
-};
+async function createMovieServices(movieObject){
+  try {
+    const movie = new Movie(movieObject)
+    return await movie.save()
+  } catch (error) {
+    throw error
+  }   
+}
 
 
 
 module.exports = {
   getAllMovies,
-  createMovieController,
+  createMovieServices,
   
 }
 
