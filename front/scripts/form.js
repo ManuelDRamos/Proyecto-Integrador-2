@@ -14,7 +14,7 @@ function form(){
         const moviesObject = { title, year, director, poster, rate, duration, genre}
         axios.post("http://localhost:3000/movies", moviesObject)
             .then((response) => {
-                if(response.status === 200) alert("Pelicula creada con exito")
+                if(response.status === 200) alert("Pelicula creada con exito");
             })
 
     document.querySelector("#resetButon").addEventListener("click", (e) => {
